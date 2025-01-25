@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(image.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px; /* Increased max-width to make the box bigger */
+    padding: 30px; /* Increased padding for more space inside the box */
+}
+
+
+.card-title {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group-prepend span {
+    width: 40px;
+    background-color: #6a0dad; /* Purple background for icons */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.remember {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.login_btn {
+    background-color: #6a0dad; /* Purple button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.login_btn:hover {
+    background-color: #5a0bbd; /* Darker purple on hover */
+}
+
+.card-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-footer a {
+    color: #b885dd; /* Purple links */
+    text-decoration: none;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .login_btn {
+        width: 100%;
+        padding: 12px;
+    }
+}

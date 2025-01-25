@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link href="s_index.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+
+        function storeLanguage() {
+            var langSelect = document.querySelector('.goog-te-combo');
+            if (langSelect) {
+                langSelect.addEventListener('change', function() {
+                    localStorage.setItem('selectedLanguage', langSelect.value);
+                });
+            }
+        }
+
+        function applyStoredLanguage() {
+            var lang = localStorage.getItem('selectedLanguage');
+            if (lang) {
+                var select = document.querySelector('.goog-te-combo');
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event('change'));
+                }
+            }
+        }
+
+        window.onload = function() {
+            applyStoredLanguage();
+            storeLanguage();
+        };
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <div id="google_translate_element"></div> <!-- Container for Google Translate widget -->
+
+    <div class="container">
+        <h2>Multilingual Currency Converter</h2>
+        <form>
+            <div class="amount">
+                <p>Enter Amount</p> 
+                <input class="box" value="1" type="text" />
+            </div>
+            <div class="dropdown">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="US Flag" />
+                        <select name="from"></select>
+                    </div>
+                </div>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="IN Flag" />
+                        <select name="to"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="msg">1 USD = 80 INR</div>
+            <button type="button">Get Exchange Rate</button>
+        </form>
+    </div>
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
